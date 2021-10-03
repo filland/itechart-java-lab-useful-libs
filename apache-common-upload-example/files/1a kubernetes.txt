@@ -1,0 +1,18 @@
+cluster
+	argocd
+	calico
+	ingress-nginx - used as reversed proxy
+	kubeseal
+	metallb
+	monitoring
+		base
+			grafana - for searching in logs
+			loki - for collecting logs
+			prometheus - for check the state of services
+			
+opennet-kubernetes
+	apps
+		admin
+		mockup
+		xapi
+			muxsoap

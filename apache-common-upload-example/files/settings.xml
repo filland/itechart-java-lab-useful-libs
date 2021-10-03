@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+
+	<servers>
+		<server>
+			<id>csomrom-maven</id>
+			<username>username</username>
+			<password>password</password>
+		</server>
+	</servers>
+
+	<mirrors>
+		<mirror>
+			<mirrorOf>*</mirrorOf>
+			<name>csomrom-maven</name>
+			<url>https://artifactory-partner.infonova.com:443/artifactory/csomrom-maven</url>
+			<id>csomrom-maven</id>
+		</mirror>
+	</mirrors>
+
+	<activeProfiles>
+		<activeProfile>artifactory</activeProfile>
+	</activeProfiles>
+
+	<profiles>
+		<profile>
+			<id>artifactory</id>
+			<properties>
+				<csom-maven-snapshot.id>snapshots</csom-maven-snapshot.id>
+				<csom-maven-snapshot.url>https://artifactory-partner.infonova.com:443/artifactory/csomrom-maven</csom-maven-snapshot.url>
+
+				<csom-maven-release.id>releases</csom-maven-release.id>
+				<csom-maven-release.url>https://artifactory-partner.infonova.com:443/artifactory/csomrom-maven</csom-maven-release.url>
+
+				<csom-npm.id>csomrom-maven</csom-npm.id>
+				<csom-npm.url>https://artifactory-partner.infonova.com/artifactory/api/npm/csomrom-npm</csom-npm.url>
+
+				<csom-scm-connection.url-prefix>scm:git:https://bitbucket-devops-platform.bearingpoint.com/projects/C-SOM-ROM/</csom-scm-connection.url-prefix>
+				<csom-ase-generic.url>https://artifactory-partner.infonova.com/artifactory/ase-js-generic</csom-ase-generic.url>
+			</properties>
+			<repositories>
+				<repository>
+					<id>csomrom-maven</id>
+					<name>csomrom-maven</name>
+					<url>https://artifactory-partner.infonova.com:443/artifactory/csomrom-maven</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>csomrom-maven</id>
+					<name>csomrom-maven</name>
+					<url>https://artifactory-partner.infonova.com:443/artifactory/csomrom-maven</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+
+</settings>

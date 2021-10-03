@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- for writing logs to console -->
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] - %m%n</Pattern>
+            </PatternLayout>
+        </Console>
+
+        <!-- for writing logs to a file -->
+        <RollingFile name="LogToFile" fileName="logs/app-logs.log"
+                     filePattern="logs/app-logs-%i.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="2 KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="5" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="LogToFile" level="error"/>
+            <AppenderRef ref="LogToConsole" level="debug"/>
+        </Root>
+    </Loggers>
+</Configuration>
