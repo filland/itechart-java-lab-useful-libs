@@ -16,6 +16,7 @@ public class UserServiceTest {
         UserDtoV1 userDto = new UserDtoV1();
         userDto.setName("Alex");
         userService.createUser(userDto);
+        userService.deleteUser(1L);
     }
 
 
