@@ -35,21 +35,4 @@ public class UserDtoTest {
         UserDtoV2 v2 = new UserDtoV2(2L, "John", "Smith", 30);
         System.out.println(v2.toString());
     }
-
-    /**
-     * equals and hashcode
-     */
-    @Test
-    public void test3() {
-        UserDtoV1 user1 = new UserDtoV1(1L, "Alex", "K", 20);
-        UserDtoV1 user2 = new UserDtoV1(1L, "Alex", "K", 20);
-        System.out.println("v1 hashcode: " + user1.hashCode());
-        System.out.println("v1 equals: " + user1.equals(user2));
-
-        UserDtoV2 user3 = new UserDtoV2(2L, "John", "Smith", 30);
-        UserDtoV2 user4 = new UserDtoV2(2L, "John", "Smith", 30);
-        System.out.println("v2 hashcode: " + user2.hashCode());
-        System.out.println("v2 equals: " + user3.equals(user4));
-    }
-
 }
